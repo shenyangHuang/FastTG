@@ -1,21 +1,19 @@
 """
-Lumache - Python library for cooks and food lovers.
+fastTG - Python library for fast and efficient temporal graph learning. 
 """
 
 __version__ = "0.1.0"
 
-
-class InvalidKindError(Exception):
-    """Raised if the kind is invalid."""
+class TemporalGraph(object):
     pass
 
 
-def get_random_ingredients(kind=None):
+def discretize(graph):
     """
-    Return a list of random ingredients as strings.
+    Discretize the temporal graph.
 
-    :param kind: Optional "kind" of ingredients.
-    :type kind: list[str] or None
+    :param graph: The temporal graph object
+    :type graph: TemporalGraph or None
     :raise lumache.InvalidKindError: If the kind is invalid.
     :return: The ingredients list.
     :rtype: list[str]

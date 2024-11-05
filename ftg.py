@@ -14,7 +14,7 @@ def discretize(graph):
 
     :param graph: The temporal graph object
     :type graph: TemporalGraph or None
-    :raise lumache.InvalidKindError: If the kind is invalid.
+    :raise ache.InvalidKindError: If the kind is invalid.
     :return: The ingredients list.
     :rtype: list[str]
     """

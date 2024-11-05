@@ -20,6 +20,11 @@ you can use the ``ftg.load_graph()`` function:
 
 .. autofunction:: ftg.load_graph()
 
+For example:
+
+>>> import ftg
+>>> ftg.discretize()
+
 .. The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
 .. or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
 .. will raise an exception.

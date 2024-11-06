@@ -7,9 +7,13 @@ ftg.data
 Data Objects
 ------------
 
-.. currentmodule:: torch_geometric.data
+.. currentmodule:: ftg.data
 
 .. autosummary::
    :nosignatures:
    :toctree: ../generated
-   :template: autosummary/inherited_class.rst
+   :template: autosummary/class.rst
+
+   {% for name in ftg.data %}
+     {{ name }}
+   {% endfor %}

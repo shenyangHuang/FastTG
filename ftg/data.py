@@ -64,6 +64,10 @@ class BaseData:
         r"""Returns the total number of temporal edges encountered over the entire temporal graph."""
         pass
 
+    @property
+    def num_timestamps(self) -> int:
+        r"""Returns the total number of unique timestamps encountered over the entire temporal graph."""
+        pass
 
 
 class CTDG(BaseData):
@@ -98,15 +102,22 @@ class CTDG(BaseData):
     def __repr__(self) -> str:
         return f"CTDG({self.data})"
     
-    def to_dtdg(self) -> Any:
-        """Converts a continuous time dynamic graph to a discrete time dynamic graph."""
-        # Implement this method
-        pass
+    ###########################################################################
 
     def aggregate_graph(self, start_time:int, end_time:int):
         """Aggregates the graph between start_time and end_time."""
         assert start_time <= end_time, "start_time should be less or equal to end_time"
         assert isinstance(start_time, int) and isinstance(end_time, int), "start_time and end_time should be integers"
+        pass
+
+    def to_events(self) -> Any:
+        """Converts a continuous time dynamic graph to a list of events."""
+        # Implement this method
+        pass
+    
+    def to_snapshots(self) -> Any:
+        """Converts a continuous time dynamic graph to a list of snapshots."""
+        # Implement this method
         pass
     
 
@@ -142,18 +153,23 @@ class DTDG(BaseData):
     def __repr__(self) -> str:
         return f"DTDG({self.data})"
     
-    def to_ctdg(self) -> Any:
-        """Converts a discrete time dynamic graph to a continuous time dynamic graph."""
-        # Implement this method
-        pass
+    ###########################################################################
 
     def aggregate_graph(self, start_time:int, end_time:int):
         """Aggregates the graph between start_time and end_time."""
         assert start_time <= end_time, "start_time should be less or equal to end_time"
         assert isinstance(start_time, int) and isinstance(end_time, int), "start_time and end_time should be integers"
         pass
-
     
+    def to_events(self) -> Any:
+        """Converts a discrete time dynamic graph to a list of events."""
+        # Implement this method
+        pass
+
+    def to_snapshots(self) -> Any:
+        """Converts a discrete time dynamic graph to a list of snapshots."""
+        # Implement this method
+        pass
 
     
     

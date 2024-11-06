@@ -6,29 +6,34 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use fastTG, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install fastTG
 
 Creating recipes
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+To load a temporal graph from an edgelist,
+you can use the ``ftg.load_graph()`` function:
 
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
+.. autofunction:: ftg.load_graph()
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> import ftg
+>>> ftg.discretize()
+
+.. The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
+.. or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+.. will raise an exception.
+
+.. .. autoexception:: lumache.InvalidKindError
+
+.. For example:
+
+.. >>> import lumache
+.. >>> lumache.get_random_ingredients()
+.. ['shells', 'gorgonzola', 'parsley']
 
